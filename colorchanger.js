@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
-export default function ColorChangerApp() {
-  // default background = white
+export default function ColorChanger() {
   const [bgColor, setBgColor] = useState("#ffffff");
 
   return (
     <View style={[styles.container, { backgroundColor: bgColor }]}>
-      <Text style={styles.title}>Color Changer App</Text>
-
+      <Text style={styles.title}>Color Changer</Text>
       <View style={styles.btnGroup}>
         <Button title="White (Default)" onPress={() => setBgColor("#ffffff")} />
         <Button title="Light Blue" onPress={() => setBgColor("#add8e6")} />
@@ -20,16 +18,16 @@ export default function ColorChangerApp() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
+    marginVertical: 20,
     alignItems: "center",
+    padding: 10,
   },
   title: {
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: "700",
-    marginBottom: 20,
+    marginBottom: 10,
   },
   btnGroup: {
-    gap: 12, // works in new RN, if error replace with {marginVertical: 8}
+    marginVertical: 5,
   },
 });
