@@ -1,9 +1,9 @@
-// components/Messenger.js
+// components/MessengerSection.js
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, FlatList, StyleSheet } from 'react-native';
 import { db } from '../firebaseConfig';
 
-const Messenger = () => {
+const MessengerSection = () => {
   const [messages, setMessages] = useState([]);
   const [newMsg, setNewMsg] = useState('');
 
@@ -23,7 +23,7 @@ const Messenger = () => {
     if (!newMsg.trim()) return;
     db.collection('messages').add({
       text: newMsg,
-      sender: "User", // later you can replace with auth user
+      sender: "User", // later you can replace with Firebase Auth user
       createdAt: new Date(),
     });
     setNewMsg('');
@@ -59,4 +59,4 @@ const styles = StyleSheet.create({
   sender: { fontWeight: 'bold', marginRight: 5 },
 });
 
-export default Messenger;
+export default MessengerSection;
