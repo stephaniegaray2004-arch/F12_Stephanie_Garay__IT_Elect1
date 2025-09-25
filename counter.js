@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
-export default function Counter() {
+export default function counter() {
   const [count, setCount] = useState(0);
 
   return (
