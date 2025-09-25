@@ -1,14 +1,15 @@
+
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
 import CommentSection from './components/CommentSection';
-import Messenger from './components/Messenger';
+import MessengerSection from './components/MessengerSection';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <CommentSection />
-        <Messenger />
+        <MessengerSection />
       </ScrollView>
     </SafeAreaView>
   );
