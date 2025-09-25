@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
-export default function ColorChanger() {
+export default function colorchanger() {
   const [bgColor, setBgColor] = useState("#ffffff");
 
   return (
